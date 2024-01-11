@@ -1,0 +1,357 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Instrument+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+@keyframes pisca {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+:root {
+    --color1: #F2CB07;
+    --color2: #F2B807;
+    --color3: #8C6A04;
+    --color4: #403002;
+    --color5: #0D0D0D;
+    --color6: #FFFFFF;
+}
+
+/* 
+font-family: 'Arimo', sans-serif;
+font-family: 'Instrument Serif', serif;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+*/
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    /* color: var(--color6); */
+}
+
+body {
+    background-color: black;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color5);
+    color: var(--color3);
+    height: 10vh;
+    box-shadow: 0px 5px 10px 0px rgba(255, 255, 255, 0.027);
+}
+
+header h1 {
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Lemon', serif;
+    font-size: 1.5rem;
+    padding: 0 15px;
+    margin: 0 15px;
+    color: var(--color6);
+    text-wrap: nowrap;
+    letter-spacing: .2rem;
+}
+
+header h1 span {
+    color: var(--color1);
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 0 10px;
+}
+
+header nav .nav-menu {
+    display: flex;
+    gap: 50px;
+}
+
+header nav .nav-menu .nav-item a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color6)
+}
+
+header nav .nav-menu .nav-item a::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 4px solid transparent;
+    display: block;
+    transition: .5s;
+}
+
+header nav .nav-menu .nav-item a:hover::after {
+    width: 100%;
+    height: 0;
+    padding: 0;
+    border-bottom: 4px solid var(--color1);
+}
+
+header nav .nav-menu .nav-item a:hover {
+    color: var(--color1);
+    transition: 1s;
+}
+
+#menu-icon {
+    color: var(--color6);
+    font-size: 2rem;
+    display: none;
+}
+
+.main.section {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+
+}
+
+main .section-cv {
+    display: flex;
+    width: 90vw;
+    margin: auto;
+    /* background-color: aquamarine; */
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+}
+
+main .section-cv .section-sobre {
+    display: block;
+    width: 70vw;
+    /* background-color: #8C6A04; */
+}
+
+.section-sobre h2 {
+    font-family: 'Instrument Serif', serif;
+    line-height: 2rem;
+    letter-spacing: .2rem;
+    color: var(--color6);
+}
+
+.section-sobre .typewriter::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .80s infinite;
+}
+
+.section-sobre .apresentacao {
+    margin: 30px 0 50px 0;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    font-family: 'Instrument Serif', serif;
+    word-spacing: .3rem;
+    letter-spacing: .1rem;
+    color: var(--color6);
+}
+
+.section-sobre .cv-btn-down {
+    border: 1px solid var(--color6);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    color: var(--color6);
+    margin: auto;
+}
+
+.section-sobre .cv-btn-down:hover{
+    background-color: var(--color1);
+    color: var(--color5);
+    border: 1px solid var(--color5);
+    font-weight: bold;
+}
+
+.img{
+    width: 100vw;
+    text-align: center;
+}
+
+.sobre-mim{
+    width: 95vw;
+    margin: auto;
+    background-color: var(--color5);
+    text-align: center;
+    box-shadow: 0px -5px 12px 0px rgba(255, 255, 255, 0.027);
+}
+
+.sobre-mim .sobre-titulo{
+    display: inline-block;
+    margin: 20px 0 10px 0;
+    font-family: 'Lemon', serif;
+    font-size: 2rem;
+    color: var(--color6);
+}
+
+.sobre-mim .perfil{
+    font-family: 'Instrument Serif', serif;
+    font-family: 'Arimo', sans-serif;
+    color: var(--color6);
+    margin-bottom: 10px;
+}
+
+.dot{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color6);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+.quem-sou{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+
+.quem-sou h2{
+    text-align: left;
+    margin: 15px 0;
+    padding-left: 10px;
+    color: var(--color6);
+}
+.quem-sou span{
+    display: block;
+    width: 80px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--color6);
+    margin-left: 10px;
+}
+
+.quem-sou p{
+    width: 100%;
+    margin: 30px 0 10px 0;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    font-family: 'Instrument Serif', serif;
+    word-spacing: .3rem;
+    letter-spacing: .1rem;
+    color: var(--color6);
+    text-align: justify;
+}
+
+.quem-sou .more-info{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    background-color: transparent;
+    color: var(--color6);
+    margin: 5px 5px;
+}
+
+.more{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.more h4{
+    margin-left:  5px;
+}
+
+
+.techs-logo{
+    width: 7%;
+    margin: 15px;
+}
+
+footer{
+    /* background-color: #8C6A04; */
+    height: 50px;
+    font-size: 1.3rem;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:800px) {
+    header nav .nav-menu {
+        position: fixed;
+        right: -100%;
+        /* right: 0%; */
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        text-align: center;
+        gap: -30px;
+        padding-top: 50px;
+        transition: all .3s;
+    }
+
+    header nav .nav-menu.ativo {
+        right: 0;
+        background-color: var(--color5);
+        z-index: 1;
+    }
+
+    header nav #menu-icon {
+        display: block;
+    }
+
+    .main-section.ativo {
+        display: none;
+    }
+
+    main .section-cv .section-sobre {
+        display: block;
+        width: 100vw;
+        transition: all .5s;
+    }
+
+    .quem-sou{
+        display: block;
+        width: 80vw;
+        transition: all .5s;
+    }
+
+    .more{
+        font-size: 0.8rem;
+    }
+
+    .img{
+        display: none;
+    }
+
+    .techs-logo{
+        width: 15%;
+    }
+
+    footer{
+        font-size: .8rem;
+    }
+}
