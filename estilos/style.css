@@ -324,15 +324,12 @@ footer{
 
     }
 
-    
+
 
     header nav #menu-icon {
         display: block;
     }
 
-    .main-section.ativo {
-        display: none;
-    }
 
     main .section-cv .section-sobre {
         display: block;
